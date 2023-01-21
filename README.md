@@ -1,6 +1,6 @@
 # Voice-based OpenAI API
 This is a python script that uses the Google Speech Recognition library to recognize speech and send it as a prompt to the OpenAI API. It then receives a response and prints it in the console.
-![](https://github.com/Leonavshalom/speech2chatGPT/speechGPT.gif)
+![](https://github.com/speech2chatGPT/speechGPT.gif)
 
 
 Requirements
