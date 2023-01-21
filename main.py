@@ -1,7 +1,8 @@
 import functions
 
 
-#print("The value is: \n"+functions.get_voice_input())
+question = "Please explain elaborately " + functions.get_voice_input()
+answer = functions.openai_request(question)
 
-print(functions.openai_request(functions.get_voice_input())["choices"][0]["text"])
-# functions.openai_request(functions.get_voice_input())
+print("The question is: \n", question)
+print("The answer is: \n", answer)

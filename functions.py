@@ -54,4 +54,4 @@ def openai_request(text):
     if response.status_code != 200:
         logging.debug(f"Error: {response.json()}")
     else:
-        return response.json()
+        return response.json()["choices"][0]["text"]
