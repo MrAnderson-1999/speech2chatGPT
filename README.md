@@ -39,3 +39,7 @@ Note
 - Make sure you have a working microphone
 - Make sure to use the correct model name in the openai_request function.
 - Make sure to have the correct api key, the current one is only an example.
+- If requrements stuck on PyAudio, please install its refference files
+```
+sudo apt install portaudio19-dev python3-pyaudio
+```
