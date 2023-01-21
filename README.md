@@ -8,8 +8,6 @@ This is a python script that uses the Google Speech Recognition library to recog
 Requirements
 -
 - Python 3
-- SpeechRecognition pip install SpeechRecognition
-- requests pip install requests
 - OpenAI API key
  <br />
  
