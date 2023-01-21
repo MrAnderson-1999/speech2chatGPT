@@ -5,30 +5,58 @@ logging.basicConfig(filename="functions.log", level=logging.DEBUG, filemode='a',
                     datefmt='%m/%d/%Y %I:%M:%S %p')
 
 
-def get_voice_input():
+def mic_test():
     r = sr.Recognizer()
     m = sr.Microphone()
-
     try:
-        logging.debug("A moment of silence, please...")
+        print("Testing surroundings")
         with m as source:
             r.adjust_for_ambient_noise(source)
-        logging.debug("Set minimum energy threshold to {}".format(r.energy_threshold))
+        print("Set minimum energy threshold to {}".format(r.energy_threshold))
         while True:
-            logging.debug("Say something!")
+            print("Say something!")
             with m as source:
                 audio = r.listen(source)
-            logging.debug("Got it! Now to recognize it...")
+            print("Got it! Test complete...")
             try:
                 # recognize speech using Google Speech Recognition
                 value = r.recognize_google(audio)
                 if len(value) != 0:
-                    logging.debug("You said {}".format(value))
+                    print("You said {}".format(value))
+                    break
+            except sr.UnknownValueError:
+                print("Oops! Didn't catch that")
+            except sr.RequestError as e:
+                print("Uh oh! Couldn't request results from Google Speech Recognition service; {0}".format(e))
+        return True
+    except KeyboardInterrupt:
+        pass
+
+
+def get_voice_input():
+    r = sr.Recognizer()
+    m = sr.Microphone()
+    try:
+        print("Testing surroundings")
+        with m as source:
+            r.adjust_for_ambient_noise(source)
+        print("Set minimum energy threshold to {}".format(r.energy_threshold))
+        while True:
+            print("Say something!")
+            with m as source:
+                audio = r.listen(source)
+            print("Got it! Test complete...")
+            try:
+                # recognize speech using Google Speech Recognition
+                value = r.recognize_google(audio)
+                if len(value) != 0:
+                    print("You said {}".format(value))
+                    break
                     return value
             except sr.UnknownValueError:
-                logging.debug("Oops! Didn't catch that")
+                print("Oops! Didn't catch that")
             except sr.RequestError as e:
-                logging.debug("Uh oh! Couldn't request results from Google Speech Recognition service; {0}".format(e))
+                print("Uh oh! Couldn't request results from Google Speech Recognition service; {0}".format(e))
     except KeyboardInterrupt:
         pass
 
