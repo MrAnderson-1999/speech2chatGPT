@@ -2,14 +2,17 @@
 This is a python script that uses the Google Speech Recognition library to recognize speech and send it as a prompt to the OpenAI API. It then receives a response and prints it in the console.
 ![](https://github.com/Leonavshalom/speech2chatGPT/blob/master/speechGPT.gif)
 
-
+ <br />
+  <br />
+  
 Requirements
 -
 - Python 3
 - SpeechRecognition pip install SpeechRecognition
 - requests pip install requests
 - OpenAI API key
-
+ <br />
+ 
 Usage
 -
 - **Clone** the repository
@@ -33,6 +36,8 @@ export OPENAI_API_KEY=sk-kdkHi0YxxxxxxxxxxxxxxxxxxxxxxxxxxxXuBx29cM1o
 python main.py
 ```
 - Speak a question when prompted
+ 
+ <br />
 
 Note
 -
