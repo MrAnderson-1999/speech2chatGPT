@@ -35,7 +35,7 @@ export OPENAI_API_KEY=sk-kdkHi0YxxxxxxxxxxxxxxxxxxxxxxxxxxxXuBx29cM1o
 ```
 python main.py
 ```
-- Speak a question when prompted
+- **Speak** a question when prompted
  
  <br />
 
