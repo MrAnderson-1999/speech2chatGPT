@@ -9,7 +9,7 @@ Requirements
 -
 - Python 3
 - OpenAI API key
- <br />
+
  
 Usage
 -
